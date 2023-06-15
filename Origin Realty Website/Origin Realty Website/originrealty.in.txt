@@ -1,0 +1,65 @@
+; Domain: originrealty.in
+; Exported (y-m-d hh:mm:ss): 2023-01-03 04:38:01
+;
+; This file is intended for use for informational and archival
+; purposes ONLY and MUST be edited before use on a production
+; DNS server.
+;
+; In particular, you must update the SOA record with the correct
+; authoritative name server and contact e-mail address information,
+; and add the correct NS records for the name servers which will
+; be authoritative for this domain.
+;
+; For further information, please consult the BIND documentation
+; located on the following website:
+;
+; http://www.isc.org/
+;
+; And RFC 1035:
+;
+; http://www.ietf.org/rfc/rfc1035.txt
+;
+; Please note that we do NOT offer technical support for any use
+; of this zone data, the BIND name server, or any other third-
+; party DNS software.
+;
+; Use at your own risk.
+
+
+$ORIGIN originrealty.in.
+
+; SOA Record
+@	3600	 IN 	SOA	ns03.domaincontrol.com.	dns.jomax.net. (
+					2021072604
+					28800
+					7200
+					604800
+					3600
+					) 
+
+; A Record
+@	600	 IN 	A	75.2.60.5
+
+; TXT Record
+@	3600	 IN 	TXT	"v=spf1 include:spf.messagingengine.com ?all"
+1533304067562._domainkey.originrealty.in	3600	 IN 	TXT	"k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2WziRpyeJP7bdYFhFv6Z7945a4zJ12k2GVvhltC6vWzMCY+Bi99VSun6AKeISXLOSJW2f65Ss7OUR2wu9pJPXNw6aAgQhOBj58hdu0HiXp9DCXP8kbu3+jJQagM3ssuFokK/9dVNYpuOd2vnHBVBo9cpd05oV8bLwTN3ZYV9I6wIDAQAB"
+originrealty.in	3600	 IN 	TXT	"google-site-verification=69ORduOAsGOSVHqrcWw0xwdbzRNUkiNicOJDTJRMOtk"
+
+; CNAME Record
+fm1._domainkey	3600	 IN 	CNAME	fm1.originrealty.in.dkim.fmhosted.com.
+fm2._domainkey	3600	 IN 	CNAME	fm2.originrealty.in.dkim.fmhosted.com.
+fm3._domainkey	3600	 IN 	CNAME	fm3.originrealty.in.dkim.fmhosted.com.
+mail.originrealty.in	3600	 IN 	CNAME	www.fastmail.com.
+www	3600	 IN 	CNAME	origin-realty1.netlify.app.
+_domainconnect	3600	 IN 	CNAME	_domainconnect.gd.domaincontrol.com.
+
+; NS Record
+@	3600	 IN 	NS	ns03.domaincontrol.com.
+@	3600	 IN 	NS	ns04.domaincontrol.com.
+
+; MX Record
+@	3600	 IN 	MX	10	in1-smtp.messagingengine.com.
+@	3600	 IN 	MX	20	in2-smtp.messagingengine.com.
+*.originrealty.in	3600	 IN 	MX	10	in1-smtp.messagingengine.com.
+*.originrealty.in	3600	 IN 	MX	20	in2-smtp.messagingengine.com.
+
